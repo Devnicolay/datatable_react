@@ -11,7 +11,7 @@ This project is a dataTable with the following features:
 Here, dataTable for employee for example of column:
 ![Image of dataTable for employee for example of column.](./asset/view-dataTable.png "dataTable for employee for example of column")
 
-My react dataTable :
+My react dataTable on npmjs.com : [datatable_react_nicolay](https://www.npmjs.com/package/datatable_react_nicolay)
 
 ## Getting Started
 
