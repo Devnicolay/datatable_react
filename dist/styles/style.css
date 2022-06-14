@@ -1,0 +1,126 @@
+.container-data-table {
+  width: 100%;
+}
+.container-data-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container-data-table table thead th {
+  padding: 8px 10px;
+  position: relative;
+}
+.container-data-table table thead th .icons-sort {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container-data-table table thead th .icons-sort .sortAsc,
+.container-data-table table thead th .icons-sort .sortDesc {
+  height: 12px;
+  width: 10px;
+}
+.container-data-table table tbody td {
+  border-top: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: center;
+}
+.container-data-table table tbody tr:nth-child(odd) {
+  background: #f9f9f9;
+}
+.container-data-table table tbody tr:first-child {
+  border-top: 1px solid black;
+}
+.container-data-table table tbody tr:last-child {
+  border-bottom: 1px solid black;
+}
+
+.no-data {
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.data-table-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-top: 0.25em;
+}
+
+.paginationItem {
+  border: 2px solid #979797;
+  padding: 10px 15px;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  margin: 0 5px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+}
+
+.paginationItem span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prev,
+.next {
+  background: #fff;
+  border: none;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.prev:hover,
+.next:hover {
+  color: white;
+  background-color: #333;
+}
+
+.paginationItem.active {
+  border: 1px solid #888;
+  color: #888;
+  pointer-events: none;
+}
+
+.prev.disabled,
+.next.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  color: #999;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+}
+.search input {
+  margin: 1em;
+  height: 1em;
+}
+
+.data-table-head {
+  display: flex;
+  justify-content: space-between;
+}
+.data-table-head .table-length label select {
+  width: 3em;
+  height: 1.3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding-left: 0;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

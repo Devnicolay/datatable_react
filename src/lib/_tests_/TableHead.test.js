@@ -1,6 +1,6 @@
 import { render, fireEvent, waitFor, screen } from "@testing-library/react";
 import TableHead from "../components/TableHead";
-import { columns } from "../columns";
+import { columns } from "../columns/columns";
 import { sorting } from "../services/sortData";
 import React from "react";
 

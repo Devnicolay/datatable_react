@@ -1,6 +1,6 @@
 import { render, fireEvent, waitFor, screen } from "@testing-library/react";
 import DataTable from "../components/DataTable";
-import { columns } from "../columns";
+import { columns } from "../columns/columns";
 
 describe("Given I am on dataTable page", () => {
   test("Then, dataTable is render", () => {
