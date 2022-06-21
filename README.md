@@ -80,14 +80,3 @@ export const columns = [
   { label: "Car registration", id: "registration", type: "string" },
 ];
 ```
-
-## Tests
-
-If you want take tests of your dataTable, you can run tests with :
-
-```
-npm test
-
-```
-
-Else, if you don't want take tests, the folder _tests_ will be of no use to you
