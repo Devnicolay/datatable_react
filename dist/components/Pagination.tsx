@@ -32,6 +32,7 @@ const Pagination: React.FC<PaginationProps> = ({
   for (let i = 1; i <= Math.ceil(data.length / dataLimit); i++) {
     pageNumbers.push(i);
   }
+  console.log(pageNumbers);
 
   return (
     <div className="pagination">

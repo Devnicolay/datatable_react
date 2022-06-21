@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+  value: true,
 });
 exports.sorting = exports.getSort = void 0;
 
@@ -26,9 +26,9 @@ var getSort = function getSort(data, order) {
 
       return _sorted;
     }
-  } // Sort number type
+  }
 
-
+  // Sort number type
   if (order.type === "number") {
     if (order.order === "ASC" && order.column) {
       return data.sort(function (a, b) {
@@ -41,18 +41,22 @@ var getSort = function getSort(data, order) {
         return a[order.column] < b[order.column] ? 1 : -1;
       });
     }
-  } // Sort string type
+  }
 
-
+  // Sort string type
   if (order.order === "ASC" && order.column) {
     return data.sort(function (a, b) {
-      return a[order.column].toLowerCase() > b[order.column].toLowerCase() ? 1 : -1;
+      return a[order.column].toLowerCase() > b[order.column].toLowerCase()
+        ? 1
+        : -1;
     });
   }
 
   if (order.order === "DESC" && order.column) {
     return data.sort(function (a, b) {
-      return a[order.column].toLowerCase() < b[order.column].toLowerCase() ? 1 : -1;
+      return a[order.column].toLowerCase() < b[order.column].toLowerCase()
+        ? 1
+        : -1;
     });
   }
 
@@ -64,7 +68,6 @@ var getSort = function getSort(data, order) {
  * @param col column clicked for sort
  */
 
-
 exports.getSort = getSort;
 
 var sorting = function sorting(col, type, order, setOrder) {
@@ -72,13 +75,13 @@ var sorting = function sorting(col, type, order, setOrder) {
     setOrder({
       order: order.order === "ASC" ? "DESC" : "ASC",
       column: col,
-      type: type
+      type: type,
     });
   } else {
     setOrder({
       order: "ASC",
       column: col,
-      type: type
+      type: type,
     });
   }
 };
