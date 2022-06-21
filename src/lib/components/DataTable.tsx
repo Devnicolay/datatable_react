@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 // @ts-ignore
-import Pagination from "./Pagination.tsx";
+import Pagination from "./Pagination";
 // @ts-ignore
-import TableBody from "./TableBody.tsx";
+import TableBody from "./TableBody";
 // @ts-ignore
-import TableDataInfo from "./TableDataInfo.tsx";
+import TableDataInfo from "./TableDataInfo";
 // @ts-ignore
-import TableHead from "./TableHead.tsx";
+import TableHead from "./TableHead";
 // @ts-ignore
-import TableLength from "./TableLength.tsx";
+import TableLength from "./TableLength";
 // @ts-ignore
-import TableSearch from "./TableSearch.tsx";
-import { getFilterData } from "../services/returnData.js";
+import TableSearch from "./TableSearch";
+import { getFilterData } from "../services/returnData";
 
 interface TableProps {
   data: Array<any>;
@@ -32,7 +32,7 @@ const DataTable: React.FC<TableProps> = ({ data, columns }) => {
    * Get value for search input ok dataTable
    * @param valueTarget value for search input
    */
-  const onChangeSearch = (valueTarget) => {
+  const onChangeSearch = (valueTarget: any) => {
     setValueSearch(valueTarget);
   };
 
@@ -40,7 +40,7 @@ const DataTable: React.FC<TableProps> = ({ data, columns }) => {
    * Get value for select entries of dataTable
    * @param valueTarget value for select entries
    */
-  const onChangeSelect = (valueTarget) => {
+  const onChangeSelect = (valueTarget: any) => {
     setDataLimit(valueTarget);
   };
 

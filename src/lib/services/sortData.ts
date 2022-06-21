@@ -2,13 +2,13 @@
  * Sort data on clicked column
  * @param data data of dataTable
  */
-export const getSort = (data, order) => {
+export const getSort = (data: any, order: any) => {
   // Sort date type
   if (order.type === "date") {
     if (order.order === "ASC" && order.column) {
       const sorted = data
         .slice(0)
-        .sort((a, b) =>
+        .sort((a: any, b: any) =>
           new Date(a[order.column]) > new Date(b[order.column]) ? 1 : -1
         );
       return sorted;
@@ -16,7 +16,7 @@ export const getSort = (data, order) => {
     if (order.order === "DESC" && order.column) {
       const sorted = data
         .slice(0)
-        .sort((a, b) =>
+        .sort((a: any, b: any) =>
           new Date(a[order.column]) < new Date(b[order.column]) ? 1 : -1
         );
       return sorted;
@@ -26,20 +26,20 @@ export const getSort = (data, order) => {
   // Sort number type
   if (order.type === "number") {
     if (order.order === "ASC" && order.column) {
-      return data.sort((a, b) => (a[order.column] > b[order.column] ? 1 : -1));
+      return data.sort((a: any, b: any) => (a[order.column] > b[order.column] ? 1 : -1));
     }
     if (order.order === "DESC" && order.column) {
-      return data.sort((a, b) => (a[order.column] < b[order.column] ? 1 : -1));
+      return data.sort((a: any, b: any) => (a[order.column] < b[order.column] ? 1 : -1));
     }
   }
   // Sort string type
   if (order.order === "ASC" && order.column) {
-    return data.sort((a, b) =>
+    return data.sort((a: any, b: any) =>
       a[order.column].toLowerCase() > b[order.column].toLowerCase() ? 1 : -1
     );
   }
   if (order.order === "DESC" && order.column) {
-    return data.sort((a, b) =>
+    return data.sort((a: any, b: any) =>
       a[order.column].toLowerCase() < b[order.column].toLowerCase() ? 1 : -1
     );
   }
@@ -51,7 +51,7 @@ export const getSort = (data, order) => {
  * Change ASC and DESC for column cliked
  * @param col column clicked for sort
  */
-export const sorting = (col, type, order, setOrder) => {
+export const sorting = (col: any, type: any, order: any, setOrder: any) => {
   if (order.column === col) {
     setOrder({
       order: order.order === "ASC" ? "DESC" : "ASC",

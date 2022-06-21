@@ -1,8 +1,8 @@
 {
   "name": "datatable_react_nicolay",
-  "version": "0.1.91",
-  "main": "dist/index.ts",
-  "module": "dist/index.ts",
+  "version": "0.2.0",
+  "main": "dist/cjs/components/DataTable.js",
+  "module": "dist/cjs/components/DataTable.js",
   "files": [
     "dist",
     "README.md"
@@ -11,13 +11,17 @@
     "type": "git",
     "url": "https://github.com/Devnicolay/datatable_react"
   },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "scripts": {
     "sass": "sass --watch ./src/lib/sass/main.scss:./src/lib/styles/style.css",
     "start": "react-scripts start",
     "build-examples": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
+    "build": "tsc --module commonjs --outDir dist/cjs"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",

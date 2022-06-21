@@ -5,17 +5,17 @@ import { getSort } from "./sortData";
  * @returns data sorted if click on column, or data filtered with search input or data with pagination
  */
 export const getFilterData = (
-  data,
-  order,
-  valueSearch,
-  currentPage,
-  dataLimit
+  data: any,
+  order: any,
+  valueSearch: any,
+  currentPage: any,
+  dataLimit: any
 ) => {
   // Sort data on clicked column
   const filterData = getSort(data, order);
   // If use search input
   if (valueSearch.length >= 1) {
-    const dataFilter = filterData.filter((element) =>
+    const dataFilter = filterData.filter((element: any) =>
       JSON.stringify(Object(element))
         .toLowerCase()
         .includes(valueSearch.toLowerCase())

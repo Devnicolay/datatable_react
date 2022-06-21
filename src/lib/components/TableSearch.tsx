@@ -1,7 +1,7 @@
 import React from "react";
 
 interface TableSearchProps {
-  onChangeSearch: (value) => void;
+  onChangeSearch: (value: any) => void;
 }
 
 const TableSearch: React.FC<TableSearchProps> = ({ onChangeSearch }) => {

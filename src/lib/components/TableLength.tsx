@@ -1,7 +1,7 @@
 import React from "react";
 
 interface TableLengthProps {
-  onChangeSelect: (value) => void;
+  onChangeSelect: (value: any) => void;
 }
 
 const TableLength: React.FC<TableLengthProps> = ({ onChangeSelect }) => {
