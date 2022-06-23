@@ -1,6 +1,6 @@
 {
   "name": "datatable_react_nicolay",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "main": "dist/cjs/components/DataTable.js",
   "module": "dist/cjs/components/DataTable.js",
   "files": [
